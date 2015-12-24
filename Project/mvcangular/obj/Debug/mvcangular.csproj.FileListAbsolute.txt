@@ -1,0 +1,36 @@
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\mvcangular.dll.config
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\mvcangular.dll
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\mvcangular.pdb
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Helpers.dll
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Mvc.dll
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Razor.dll
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.Deployment.dll
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.dll
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.Razor.dll
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Razor.xml
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.xml
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.Deployment.xml
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.Razor.xml
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Helpers.xml
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\bin\System.Web.Mvc.xml
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\obj\Debug\mvcangular.csprojResolveAssemblyReference.cache
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\obj\Debug\mvcangular.dll
+c:\users\ozer\documents\visual studio 2013\Projects\mvcangular\mvcangular\obj\Debug\mvcangular.pdb
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\mvcangular.dll.config
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\mvcangular.dll
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\mvcangular.pdb
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Helpers.dll
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Mvc.dll
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Razor.dll
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.Deployment.dll
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.dll
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.Razor.dll
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Razor.xml
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.xml
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.Deployment.xml
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Webpages.Razor.xml
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Helpers.xml
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\bin\System.Web.Mvc.xml
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\obj\Debug\mvcangular.csprojResolveAssemblyReference.cache
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\obj\Debug\mvcangular.dll
+C:\Users\ozer\Documents\Projects\mvcangular\mvcangular\obj\Debug\mvcangular.pdb

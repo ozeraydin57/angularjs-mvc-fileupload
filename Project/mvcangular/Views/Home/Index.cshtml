@@ -1,0 +1,149 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script type="text/javascript" src="../Assets/js/jquery.js"></script>
+    <script type="text/javascript" src="../Assets/js/angular.min.js"></script>
+    <script type="text/javascript">
+        var formData;
+        $(document).ready(function () {
+            
+
+            $('input[type=file]').change(function () {
+                formData = new FormData();
+                for (var i = 0; i < $('#file1')[0].files.length; i++) {
+
+                    var item = $('#file1')[0].files[i];
+                    var fakepath = item.name;
+                    if (fakepath == "")
+                        return;
+                    var filename = fakepath.replace("C:\\fakepath\\", "").replace(/\s/g, '');
+                    var deletedivid = "div_" + ($("#filelist").find("div").length + 1);
+                    //alert(filename);
+                    var html = "<div id='" + deletedivid + "'><a href='#' style='width:70%' class='col-xs-10 blockHover'>" + filename + "</a>" +
+                    "<a href='javascript:deleteFile(\"" + deletedivid + "\");' style='width:20px;height:20px;' class='col-xs-2 blockHover'><i class='fa fa-remove'></i></a></div>";
+                    $("#filelist").append(html);
+
+                    var file = item;
+                    formData.append(deletedivid, file);
+                    // alert(file);
+                    //$('#inputFiles').val("");
+                }
+            });
+        });
+        function deleteFile(divID) {
+
+            $("#" + divID).remove();
+        }
+    </script>
+
+    <script type="text/javascript">
+        angular.module('Request', [])
+       .directive('ngFiles', ['$parse', function ($parse) {
+           function fn_link(scope, element, attrs) {
+               var onChange = $parse(attrs.ngFiles);
+               element.on('change', function (event) {
+                   onChange(scope, { $files: event.target.files });
+               });
+           };
+           return {
+               link: fn_link
+           }
+       }])
+       .controller('RequestCont', function ($scope, $http) {
+           var formdata = new FormData();
+           var html = "";
+           $scope.getTheFiles = function ($files) {
+               formdata = new FormData();
+               angular.forEach($files, function (value, key) {
+                   formdata.append(key, value);
+               });
+           };
+           // NOW UPLOAD THE FILES.
+           $scope.uploadFiles = function () {
+               debugger;
+               var request = {
+                   method: 'POST',
+                   url: '@Url.Action("FileUploadMethod", "FileUpload")' + "?requestID=Denem&usertype=K",
+                   data: formdata,
+                   headers: {
+                       'Content-Type': undefined
+                   }
+               };
+               // SEND THE FILES.
+               $http(request)
+                   .success(function (d) {
+                       alert("Dosyalar Yüklendi");
+                   })
+                   .error(function () {
+                       alert("Yüklerken Hata Oluştu");
+                   });
+           }
+
+           $scope.fileList = function () {
+               var request = {
+                   method: 'GET',
+                   url: '@Url.Action("FileList", "FileUpload")' + "?requestID=Denem&usertype=K",
+                   async: false,
+               };
+               $http(request)
+                   .success(function (d) {
+                       angular.forEach(d, function (value, key) {
+                           debugger;
+                           $("#fileList").append("<a href='/Uploads/Denem/K/" + value + "'>" + value + "</a><br />");
+                       });
+                   })
+                   .error(function () {
+                   });
+           }
+           $scope.fileList();
+       });
+
+    </script>
+</head>
+<body>
+    <div ng-app="Request">
+
+        <div ng-controller="RequestCont">
+            <form>
+                <table>
+                    <tr>
+                        <td class="form-padding" nowrap="nowrap">
+                            <strong>Dosyaları Yükleyin</strong>
+                        </td>
+                        <td></td>
+                        @* <td class="form-padding" nowrap="nowrap"><input file-model="myFile" type="file" name="inputFiles" id="inputFiles" multiple="true" /></td>*@
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="file" id="file1" name="file" multiple
+                                   ng-files="getTheFiles($files)" />
+                            <div class="row" id="filelist" style="margin:10px;"></div>
+                        </td>
+                        <td><input type="button" ng-click="uploadFiles()" value="Upload" /></td>
+
+                        <td>
+                            <div id="fileList"></div>
+                        </td>
+                        @*<td></td>
+                                <td>
+                                    <div class="row" id="filelist" style="margin:10px;"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input id="Button1" type="button" value="Yükle" ng-click="uploadFile()" />
+                                </td>*@
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
